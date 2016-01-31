@@ -65,7 +65,8 @@ labelJoin$typeOfActivity <- tempLabel
 # Appropriately labels the data set with descriptive variable names.
 colnames(subjectJoin) <- "subject"
 newData <- cbind(subjectJoin,labelJoin,dataJoin)
-write.csv(newData, "dataSetStep4.csv")
+# write.csv(newData, "dataSetStep4.csv")
+write.table(newData, "dataSetStep4.txt")
 dim(newData)
 # in RStudio
 # View(newData)
@@ -74,7 +75,8 @@ dim(newData)
 # data set with the average of each variable for each activity and each subject.
 newData2 <- group_by(newData, subject, typeOfActivity)
 newData3 <- summarise_each(newData2, funs(mean))
-write.csv(newData3, "dataSetStep5.csv")
+# write.csv(newData3, "dataSetStep5.csv")
+write.table(newData3, "dataSetStep5.txt")
 dim(newData3)
 # in RStudio
 # View(newData3)
