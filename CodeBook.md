@@ -11,8 +11,9 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 The **run_analysis.R** script works the following steps:
-    1. Read X_train.txt, y_train.txt and subject_train.txt from the "data/train" folder and store them in *dataTrain*, *labelTrain* and *subjectTrain* variables.
-    2. Read X_test.txt, y_test.txt and subject_test.txt from the "data/test" folder and store them in *dataTest*, *labelTest* and *subjectTest* variables.
+
+    1. Read X_train.txt, y_train.txt and subject_train.txt from the "data/train" folder and store them in *dataTrain*, *labelTrain* and *subjectTrain* variables. 
+    2. Read X_test.txt, y_test.txt and subject_test.txt from the "data/test" folder and store them in *dataTest*, *labelTest* and *subjectTest* variables.  
     3. With rbin concatenate dataTrain to dataTest to generate *dataJoin* (dimension: 10299x66); concatenate labelTrain to labelTest to generate *labelJoin* (dimension: 10299x1); concatenate subjectTrain to subjectTest to generate *subjectJoin* (dimension: 10299x1).
     4. Read features.txt file from the "data" folder and store the data in a variable *nameVars*. We only need the columns mean and std. We get a subset of dataJoin with 66 columns (all with mean and std columns).
     5. Clean the names of the subset columns. Remove the symbols: "()" and "-" and make the first letter of "mean" and "std" a capital letter "M" and "S" respectively (naming convention).
