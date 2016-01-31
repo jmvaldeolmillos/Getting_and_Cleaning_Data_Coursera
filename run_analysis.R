@@ -66,7 +66,7 @@ labelJoin$typeOfActivity <- tempLabel
 colnames(subjectJoin) <- "subject"
 newData <- cbind(subjectJoin,labelJoin,dataJoin)
 # write.csv(newData, "dataSetStep4.csv")
-write.table(newData, "dataSetStep4.txt")
+write.table(newData, "dataSetStep4.txt", row.names = FALSE)
 dim(newData)
 # in RStudio
 # View(newData)
@@ -76,7 +76,7 @@ dim(newData)
 newData2 <- group_by(newData, subject, typeOfActivity)
 newData3 <- summarise_each(newData2, funs(mean))
 # write.csv(newData3, "dataSetStep5.csv")
-write.table(newData3, "dataSetStep5.txt")
+write.table(newData3, "dataSetStep5.txt", row.names = FALSE)
 dim(newData3)
 # in RStudio
 # View(newData3)
