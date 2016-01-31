@@ -1,5 +1,5 @@
-# Getting and Cleaning Data Course Project CodeBook  
-### Assignment Week 4  
+# Getting and Cleaning Data Course Project CodeBook
+### Assignment Week 4
 ***
 This file describes step by step how the script **run_analysis.R** works. Variables and processing operations to achieve a clean dataset (DataSet Step 4 and 5).  
 
